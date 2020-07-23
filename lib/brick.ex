@@ -15,4 +15,9 @@ defmodule Tetris.Brick do
     }
   end
 
+  defp random_name() do
+    ~w(i l z o t)a
+    |> Enum.random()
+  end
+
 end
