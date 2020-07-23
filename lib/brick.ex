@@ -20,4 +20,9 @@ defmodule Tetris.Brick do
     |> Enum.random()
   end
 
+  defp random_rotation() do
+    [0, 90, 180, 270]
+    |> Enum.random()
+  end
+
 end
