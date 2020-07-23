@@ -25,4 +25,8 @@ defmodule Tetris.Brick do
     |> Enum.random()
   end
 
+  defp random_reflection() do
+    [true, false]
+    |> Enum.random()
+  end
 end
