@@ -7,7 +7,5 @@ defmodule BrickTest do
     assert new_brick().name == :i
   end
 
-  def new_brick do
-    Tetris.Brick.__struct__()
-  end
+  def new_brick, do: new()
 end
