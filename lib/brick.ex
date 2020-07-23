@@ -4,4 +4,6 @@ defmodule Tetris.Brick do
             rotation: 0,
             reflection: false
 
+  def new(), do: __struct__()
+
 end
