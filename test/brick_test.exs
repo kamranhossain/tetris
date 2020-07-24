@@ -29,5 +29,5 @@ defmodule BrickTest do
     assert actual.rotation == 180
   end
 
-  def new_brick, do: new()
+  def new_brick(attributes \\ []), do: new(attributes)
 end
