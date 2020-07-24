@@ -2,6 +2,7 @@ defmodule BrickTest do
   use ExUnit.Case
 
   import Tetris.Brick
+  alias Tetris.Points
 
   test "Creates a new brick" do
     assert new_brick().name == :i
@@ -43,6 +44,16 @@ defmodule BrickTest do
       |> shape
 
     assert {3, 3} in points
+  end
+
+  test "should translate a list of points" do
+    actual_points =
+      new_brick()
+      |> shape
+      |> Points.translate({1, 1})
+      |> Points.translate({0, 1})
+
+    assert actual_points == [{3, 3}, {3, 4}, {3, 5}, {3, 6}]
   end
 
   def new_brick(attributes \\ []), do: new(attributes)
