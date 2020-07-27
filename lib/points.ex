@@ -8,4 +8,9 @@ defmodule Tetris.Points do
     |> Enum.map(fn {x, y} -> {y, x} end)
   end
 
+  defp mirror(points) do
+    points
+    |> Enum.map(fn {x, y} -> {4 - x, y} end)
+  end
+
 end
