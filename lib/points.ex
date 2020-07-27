@@ -18,4 +18,10 @@ defmodule Tetris.Points do
     |> Enum.map(fn {x, y} -> {x, 4 - y} end)
   end
 
+  def rotate_90(points) do
+    points
+    |> transpose()
+    |> mirror()
+  end
+
 end
