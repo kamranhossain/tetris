@@ -13,4 +13,9 @@ defmodule Tetris.Points do
     |> Enum.map(fn {x, y} -> {4 - x, y} end)
   end
 
+  defp flip(points) do
+    points
+    |> Enum.map(fn {x, y} -> {x, 4 - y} end)
+  end
+
 end
