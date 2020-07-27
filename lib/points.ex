@@ -24,4 +24,12 @@ defmodule Tetris.Points do
     |> mirror()
   end
 
+  def rotate(points, 0), do: points
+
+  def rotate(points, degrees) do
+    rotate(
+      rotate_90(points),
+      degrees - 90
+    )
+  end
 end
